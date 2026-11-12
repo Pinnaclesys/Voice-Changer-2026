@@ -1,3 +1,6 @@
+<img width="1672" height="941" alt="Неоновый баннер AI Voice Changer" src="https://github.com/user-attachments/assets/80767e8a-4686-4cb8-ab52-54632d82d47c" />
+
+
 # 🎙️ AI Voice Changer
 
 A fast, neural-network-based voice changer for Windows, written in C++. Works in real time with your microphone and can also convert audio files. No installation, no Python: download the `.exe` and run it.
@@ -149,3 +152,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - The authors of the open-source models and libraries this project is built on
 - Everyone who tests the app and sends feedback
+
+Keywords:
+clown fish voice changer, sound board, verity voice changer, voicemeeter, voice recorder online, lalal.ai voice changer, voice meter, mic test, nch voxal voice changer, voice cha, ultron voice changer, vb cable, equalizer apo, miku voice changer, fish audio, voice speed changer, voice changer client demo, mp4 to mp3, voice changer anime, audacity, free fire voice changer app, oneplus voice changer, anime voice changer, easeus, ff voice changer, okada voice changer, sonic voice changer, robotic voice changer, voicechanger, voice changer ps5, voice changer for roblox, okada, voice changer for gaming, elevenlabs, hitpaw voice changer, real time voice changer, rvc voice changer, voice changer plus, music voice changer, ai voice generator, trump voice changer, clownfish voice changer скачать, voice recorder, voice changer roblox, best voice changer app, voice changer mod, roblox voice changer, easeus voice changer, voicemod download, applio
