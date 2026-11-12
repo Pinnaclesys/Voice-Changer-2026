@@ -2,22 +2,23 @@
 
 **English** | [Русский](README.ru.md)
 
-Neural-network-based voice changer for real-time use and for audio recordings. Pick a model, hit Start, and speak in a different voice.
+A fast, neural-network-based voice changer for Windows, written in C++. Works in real time with your microphone and can also convert audio files. No installation, no Python: download the `.exe` and run it.
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue?logo=cplusplus&logoColor=white)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?logo=windows&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
 ![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen)
 
 ## ✨ Features
 
 - 🤖 **AI voice conversion**: neural models keep your intonation and emotion while changing only the timbre
-- ⚡ **Real-time mode**: works with your microphone, great for games, streaming, and calls
+- ⚡ **Real-time mode**: low-latency processing thanks to native C++ code
 - 🎞️ **File processing**: convert recordings in WAV, MP3, and FLAC formats
 - 🎚️ **Fine-tuning**: pitch shift, effect strength, noise suppression
-- 📦 **Custom models**: load any compatible voice model
-- 🖥️ **GPU and CPU support**: accelerated on NVIDIA GPUs, slower on CPU
-- 🔌 **Virtual microphone**: plug the output into Discord, OBS, Telegram, and other apps
+- 📦 **Custom models**: load your own compatible voice models
+- 🖥️ **GPU and CPU support**: accelerated on NVIDIA GPUs, still works on CPU
+- 🔌 **Virtual microphone**: use the output in Discord, OBS, Telegram, and other apps
+- 💾 **Portable**: a single folder, nothing is installed into your system
 
 ## 🧠 How It Works
 
@@ -26,59 +27,52 @@ Neural-network-based voice changer for real-time use and for audio recordings. P
 3. The target voice model applies a new timbre.
 4. The result is played through your headphones or sent to a virtual microphone.
 
-## 📦 Requirements
+## 📥 Download
+
+1. Go to the [**Releases**](../../releases/latest) page.
+2. Download the latest `VoiceChanger.zip`.
+3. Extract it to any folder.
+4. Run `VoiceChanger.exe`.
+
+That's it, no installer and no extra software needed.
+
+## 📦 System Requirements
 
 | Component | Minimum | Recommended |
 |---|---|---|
-| OS | Windows 10 / Linux / macOS | Windows 11 / Ubuntu 22.04 |
-| Python | 3.10 | 3.10–3.11 |
+| OS | Windows 10 (64-bit) | Windows 11 (64-bit) |
 | GPU | Not required | NVIDIA with 4+ GB VRAM |
 | RAM | 8 GB | 16 GB |
+| Disk space | 1 GB | 2 GB+ (for several models) |
 
-## 🚀 Installation
-
-```bash
-git clone https://github.com/username/ai-voice-changer.git
-cd ai-voice-changer
-
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-
-pip install -r requirements.txt
-```
-
-For GPU acceleration on NVIDIA cards, install the CUDA build of PyTorch following the [official guide](https://pytorch.org/get-started/locally/).
+If the app doesn't start, install the latest [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist).
 
 ## 🛠 Quick Start
 
-### 1. Download a model
+### 1. Add a voice model
 
-Put the model files (`.pth` and, if available, `.index`) into the `models/` folder:
+Put the model files into the `models/` folder next to the `.exe`:
 
 ```
-models/
-└── my_voice/
-    ├── my_voice.pth
-    └── my_voice.index
+VoiceChanger/
+├── VoiceChanger.exe
+└── models/
+    └── my_voice/
+        └── my_voice.onnx
 ```
 
-### 2. Run the app
+### 2. Run and configure
 
-```bash
-python main.py
-```
+1. Launch `VoiceChanger.exe`
+2. Select your microphone and output device
+3. Choose a voice model
+4. Adjust pitch and effect strength
+5. Click **Start**
 
-### 3. Configure and press Start
+### Command line (optional)
 
-1. Select your microphone and output device
-2. Choose a voice model
-3. Adjust pitch and effect strength
-4. Click **Start**
-
-### Process a file from the command line
-
-```bash
-python convert.py --input input.wav --output output.wav --model models/my_voice/my_voice.pth --pitch 0
+```bat
+VoiceChanger.exe --input input.wav --output output.wav --model models\my_voice\my_voice.onnx --pitch 0
 ```
 
 ## ⚙️ Main Parameters
@@ -91,6 +85,20 @@ python convert.py --input input.wav --output output.wav --model models/my_voice/
 | `--device` | `cuda` or `cpu` | `auto` |
 | `--chunk-size` | Chunk size in seconds, affects latency | `0.25` |
 
+## 🔨 Building from Source
+
+**Requirements:** Windows 10/11, [Visual Studio 2022](https://visualstudio.microsoft.com/) with the "Desktop development with C++" workload, [CMake](https://cmake.org/) 3.20+, and Git.
+
+```bat
+git clone --recursive https://github.com/username/ai-voice-changer.git
+cd ai-voice-changer
+
+cmake -B build -G "Visual Studio 17 2022" -A x64
+cmake --build build --config Release
+```
+
+The compiled app will be at `build\Release\VoiceChanger.exe`.
+
 ## 💡 Tips
 
 - **Male → female voice**: raise the pitch by +8 to +12 semitones
@@ -99,6 +107,9 @@ python convert.py --input input.wav --output output.wav --model models/my_voice/
 - **Hissing or background noise**: enable noise suppression and use a good microphone
 
 ## ❓ FAQ
+
+**Windows SmartScreen or my antivirus warns about the .exe. Is it safe?**
+The app is not digitally signed, so Windows may show a warning for unknown publishers. Click **More info → Run anyway**. The full source code is in this repository, so you can review it or build the app yourself.
 
 **Do I need a GPU?**
 No, but real-time latency is noticeably higher on CPU.
